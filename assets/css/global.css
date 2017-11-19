@@ -4,9 +4,9 @@
 :root {
     /* Colours */
     --blue: #3eb0ef;
-    --green: #a4d037;
+    --green: #8fff0f;
     --purple: #ad26b4;
-    --yellow: #fecd35;
+    --yellow: #ffe100;
     --red: #f05230;
     --darkgrey: #15171A;
     --midgrey: #738a94;
@@ -14,6 +14,7 @@
     --whitegrey: #e5eff5;
     --pink: #fa3a57;
     --brown: #a3821a;
+    --darkblue: #0a4ab2;
 }
 
 /* Reset
@@ -130,7 +131,6 @@ img {
 }
 html {
     box-sizing: border-box;
-    font-family: sans-serif;
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -185,12 +185,34 @@ svg:not(:root) {
 mark {
     background-color: #fdffb6;
 }
+
+code {
+  background: #f4f5f6;
+  border-radius: .4rem;
+  font-size: 86%;
+  margin: 0 .2rem;
+  padding: .2rem .5rem;
+  white-space: nowrap;
+}
+
+pre {
+  background: #f4f5f6;
+  border-left: 0.3rem solid #9b4dca;
+  overflow-y: hidden;
+}
+
+pre > code {
+  border-radius: 0;
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
 code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
+    font-family: "ANDALE MONO", Monaco, monospace;
 }
 button,
 input,
@@ -200,6 +222,27 @@ textarea {
     margin: 0; /* 3 */
     color: inherit; /* 1 */
     font: inherit; /* 2 */
+}
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 0.1rem solid #d1d1d1;
+  border-radius: .4rem;
+  box-shadow: none;
+  box-sizing: inherit;
+  height: 3.8rem;
+  padding: .6rem 1.0rem;
+  width: 100%;
 }
 button {
     overflow: visible;
@@ -275,19 +318,19 @@ th {
 html {
     overflow-x: hidden;
     overflow-y: scroll;
-    font-size: 62.5%;
+    font-size: 55%;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
     overflow-x: hidden;
-    color: color(var(--midgrey) l(-25%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.5rem;
+    color: #606c76;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
     line-height: 1.6em;
-    font-weight: 400;
     font-style: normal;
-    letter-spacing: 0;
+    letter-spacing: .01em;
     text-rendering: optimizeLegibility;
     background: #fff;
 
@@ -381,9 +424,15 @@ dd {
 }
 
 blockquote {
-    margin: 1.5em 0;
-    padding: 0 1.6em 0 1.6em;
-    border-left: var(--whitegrey) 0.5em solid;;
+  border-left: 0.3rem solid #d1d1d1;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2.5rem;
+  padding: 1rem 1.5rem;
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
 }
 
 blockquote p {

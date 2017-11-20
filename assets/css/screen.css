@@ -427,6 +427,16 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 0 20%;
 }
 
+.post-feed.tag-view {
+    top: 50px;
+    margin-bottom: 50px;
+}
+
+.post-feed.author-view {
+    top: 50px;
+    margin-bottom: 50px;
+}
+
 .post-card {
     flex: 2 1 400px;
     display: flex;

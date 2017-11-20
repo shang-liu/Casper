@@ -3,7 +3,7 @@
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#tag}}
-<header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+<header class="site-header outer">
     <div class="inner">
         {{> "site-nav"}}
         <div class="site-header-content">
@@ -23,7 +23,7 @@
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-        <div class="post-feed">
+        <div class="post-feed tag-view">
             {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
